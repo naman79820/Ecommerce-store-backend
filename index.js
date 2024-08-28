@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database connection
-mongoose.connect('mongodb://localhost:27017/Ecommerce-store')
+mongoose.connect('mongodb+srv://naman79820:harley%40789@ecommerce-store.j43z2.mongodb.net/?retryWrites=true&w=majority&appName=Ecommerce-Store')
  
 .then(() => console.log('Database Connected!'))
   .catch((error) => console.log('Database connection error:', error));
