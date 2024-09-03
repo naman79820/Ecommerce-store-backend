@@ -80,7 +80,7 @@ const signInController = async(req,res)=>{
       const userId= req.query.id
       const user = await User.findById(userId);
       if(!user){
-        res.status(400).json({message:"User not found"})
+        return res.status(400).json({message:"User not found"})
       }
       user.password=undefined
       res.status(200).json({user})
