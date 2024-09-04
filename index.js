@@ -6,6 +6,7 @@ const categoryRoutes = require("./src/routes/category.route");
 const productRoutes = require("./src/routes/product.route");
 const reviewRoutes = require("./src/routes/review.route");
 const cartRoutes = require("./src/routes/cart.route");
+const orderRoutes = require("./src/routes/order.route");
 const cloudinary = require("cloudinary");
 
 const env = require("dotenv");
@@ -38,6 +39,7 @@ app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", reviewRoutes);
 app.use("/api", cartRoutes);
+app.use("/api", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
